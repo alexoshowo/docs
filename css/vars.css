@@ -1,0 +1,109 @@
+/* Fluid Typography with CSS clamp() */
+:root {
+  /* Font Family */
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text", "Segoe UI",
+    "SF Pro Text", "Inter", Roboto, "Helvetica Neue", Helvetica, Arial,
+    "Noto Sans", "Liberation Sans", Ubuntu, Cantarell, Oxygen, "Fira Sans",
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+    sans-serif;
+
+  --font-display:
+    -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI",
+    "SF Pro Display", "Inter Display", "Inter", Roboto, "Helvetica Neue",
+    Helvetica, "Noto Sans Display", "Noto Sans", "Liberation Sans", Ubuntu,
+    Cantarell, Oxygen, "Fira Sans", "Droid Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Noto Color Emoji", Arial, sans-serif;
+}
+:root {
+  --ratio: 1.414;
+  --base-font-size: 1rem;
+  --h6: calc(var(--base-font-size) * var(--ratio));
+  --h5: calc(var(--base-font-size) * 2 * var(--ratio));
+  --h4: calc(var(--base-font-size) * 3 * var(--ratio));
+  --h3: calc(var(--base-font-size) * 4 * var(--ratio));
+  --h2: calc(var(--base-font-size) * 5 * var(--ratio));
+  --h1: calc(var(--base-font-size) * 6 * var(--ratio));
+}
+
+:root {
+  /* Light Theme - Base Colors */
+  --bg-primary: #f5f3f0; /* Muted bright gray-cream */
+  --bg-secondary: #ebe8e3; /* Darker shade for cards/sections */
+  --bg-tertiary: #e0dcd5; /* Even darker for hover states */
+
+  --text-primary: #2c2c2c; /* Charcoal */
+  --text-secondary: #545454; /* Lighter charcoal for secondary text */
+  --text-muted: #787878; /* Muted text */
+
+  --border-color: #d4d0c8; /* Subtle borders */
+  --border-hover: #c4bfb5; /* Border on hover */
+
+  /* Semantic Colors - Light Theme */
+  --success: #4a7c59; /* Muted green */
+  --success-bg: #e8f5e9; /* Light green background */
+  --success-border: #a8d5a8; /* Green border */
+
+  --error: #b44a4a; /* Muted red */
+  --error-bg: #fdeaea; /* Light red background */
+  --error-border: #f5b5b5; /* Red border */
+
+  --warning: #b8932e; /* Muted yellow/gold */
+  --warning-bg: #fffbeb; /* Light yellow background */
+  --warning-border: #f5d88a; /* Yellow border */
+
+  --info: #4a6b9c; /* Muted blue */
+  --info-bg: #e8f2fb; /* Light blue background */
+  --info-border: #a8c5e8; /* Blue border */
+  /* Brand/Interactive Colors - Light Theme */
+  --brand-primary: #8b6b9d; /* Muted purple */
+  --brand-primary-hover: #75588a; /* Darker purple on hover */
+  --brand-primary-active: #5f4671; /* Even darker when active */
+  --brand-primary-bg: #f3eff5; /* Light purple background */
+
+  --download: #4a7c59; /* Muted green (same as success) */
+  --download-hover: #3d6849; /* Darker green on hover */
+  --download-active: #315438; /* Even darker when active */
+  --download-bg: #e8f5e9; /* Light green background */
+}
+
+[data-theme="dark"] {
+  /* Dark Theme - Base Colors */
+  --bg-primary: #2a2527; /* Soft dark gray with pinkish tint */
+  --bg-secondary: #352f32; /* Lighter shade for cards/sections *!*/
+  --bg-tertiary: #403a3d; /* Even lighter for hover states */
+
+  --text-primary: #f5f5f5; /* White */
+  --text-secondary: #d0d0d0; /* Slightly dimmed white */
+  --text-muted: #a8a8a8; /* Muted text */
+
+  --border-color: #4a4347; /* Subtle borders with pink tint */
+  --border-hover: #574d52; /* Border on hover */
+
+  /* Semantic Colors - Dark Theme */
+  --success: #6fb583; /* Lighter muted green */
+  --success-bg: #1e3a26; /* Dark green background */
+  --success-border: #3d6647; /* Green border */
+
+  --error: #d97373; /* Lighter muted red */
+  --error-bg: #3a1e1e; /* Dark red background */
+  --error-border: #664040; /* Red border */
+
+  --warning: #d4b560; /* Lighter muted yellow */
+  --warning-bg: #3a3120; /* Dark yellow background */
+  --warning-border: #665a3d; /* Yellow border */
+
+  --info: #7293ba; /* Lighter muted blue */
+  --info-bg: #1e2a3a; /* Dark blue background */
+  --info-border: #3d4f66; /* Blue border */
+  /* Brand/Interactive Colors - Dark Theme */
+  --brand-primary: #d4a5c4; /* Light pink */
+  --brand-primary-hover: #e0b8d1; /* Lighter pink on hover */
+  --brand-primary-active: #eccade; /* Even lighter when active */
+  --brand-primary-bg: #3a2a35; /* Dark pinkish background */
+
+  --download: #6fb583; /* Lighter muted green (same as success) */
+  --download-hover: #85c497; /* Lighter green on hover */
+  --download-active: #9bd3ab; /* Even lighter when active */
+  --download-bg: #1e3a26; /* Dark green background */
+}

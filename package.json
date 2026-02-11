@@ -1,0 +1,9 @@
+{
+  "name": "hello",
+  "type": "module",
+  "scripts": {
+  },
+  "dependencies": {
+    "marked": "^17.0.1"
+  }
+}
