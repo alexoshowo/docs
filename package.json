@@ -2,8 +2,12 @@
   "name": "hello",
   "type": "module",
   "scripts": {
+    "dev": "live-server"
   },
   "dependencies": {
     "marked": "^17.0.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }

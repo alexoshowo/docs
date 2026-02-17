@@ -1,14 +1,9 @@
-import { Marked } from 'https://cdn.jsdelivr.net/npm/marked@11/lib/marked.esm.js';
-const marked = new Marked({
-  gfm: true
-});
-const text = marked.parse(`
-# Kavuntech Docs
-Welcome
-`);
+import { Content } from './content.js';
 
-console.log(text);
+
+console.log(Content);
 
 const renderer = document.getElementById('app');
-renderer.innerHTML = text;
+renderer.innerHTML = Content;
+
 
