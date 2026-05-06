@@ -1,0 +1,21 @@
+{
+  "hash": "fdecabf9",
+  "configHash": "b15a25ce",
+  "lockfileHash": "702afc8f",
+  "browserHash": "94705085",
+  "optimized": {
+    "dompurify": {
+      "src": "../../node_modules/dompurify/dist/purify.es.mjs",
+      "file": "dompurify.js",
+      "fileHash": "d64da501",
+      "needsInterop": false
+    },
+    "marked": {
+      "src": "../../node_modules/marked/lib/marked.esm.js",
+      "file": "marked.js",
+      "fileHash": "5d1dcaa9",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

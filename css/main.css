@@ -1,14 +1,15 @@
 @import "vars.css";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   width: 960px;
   margin: 0 auto;
 }
+
 .downloads > a {
   display: block;
   padding: 1rem;
@@ -25,8 +26,8 @@ header {
 
 html {
   font-size: 1rem;
-  font-optical-sizing: auto;
   font-kerning: normal;
+  font-synthesis: none;
 }
 
 body {
@@ -47,24 +48,32 @@ body {
 main {
   max-width: 960px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family:var(--font-display);
 }
 h1 {
   font-size: var(--h1);
-  font-weight: 500;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.25rem;
 }
 h2 {
   font-size: var(--h2);
-  font-weight: 500;
+  font-weight: 300;
   color: var(--text-secondary);
+  line-height: 1.25;
 }
 h3 {
   font-size: var(--h3);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 h4 {
   font-size: var(--h4);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
 }
 h5 {
@@ -72,13 +81,17 @@ h5 {
   font-weight: 500;
 }
 
+p{
 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 ol {
   counter-reset: item;
   padding-left: 0;
 }
 
-li {
+ol > li {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -88,9 +101,10 @@ li {
   gap: 2rem;
   border-radius: 1rem;
   border: 1px solid var(--border);
+  margin-bottom: 1rem;
 }
 
-li::before {
+ol > li::before {
   content: counter(item);
   display:flex;
   align-items: center;
@@ -105,7 +119,7 @@ li::before {
   font-weight: 500;
 
 }
-li a{
+ li a{
   text-decoration: none;
   color: var(--text-primary);
   background: var(--primary);
@@ -116,5 +130,6 @@ li a{
   justify-content: center;
   width: 200px;
   height: 2.5rem;
-
 }
+
+
