@@ -1,4 +1,4 @@
-@import "/fonts/inter.css";
+@import "/fonts/fonts.css";
 
 :root {
   --font-display: "InterVariable","InterDisplay" ,sans-serif;
@@ -8,10 +8,11 @@
     "Noto Sans", "Liberation Sans", Ubuntu, Cantarell, Oxygen, "Fira Sans",
     "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
     sans-serif;
+  --font-mono:"Cascadia Code", Menlo, Monaco, "Courier New", monospace;
 font-optical-sizing: auto;
 }
 :root {
-  --ratio: 1.333;
+  --ratio: 1.225;
   --base-font-size: 1rem;
   --h6: calc(var(--base-font-size) * var(--ratio));
   --h5: calc(var(--h6) * var(--ratio));
@@ -23,129 +24,118 @@ font-optical-sizing: auto;
     --ratio: 1.125;
   }
 }
+/* ─── Light ──────────────────────────────────────────────── */
+[data-theme="light"] {
 
-/* =========================
-   LIGHT THEME (default)
-   ========================= */
+  /* Neutrals */
+  --bg:              oklch(97.8% 0.008 30);
+  --surface:         oklch(99.2% 0.005 30);
+  --muted:           oklch(94.5% 0.012 30);
+  --border:          oklch(87.0% 0.018 30);
 
-:root {
-  /* Base Neutrals */
-  --bg: #F9F5F2;
-  --surface: #FFF0EF;    /* soft warm tone, slightly above bg */
-  --muted: #EFE0DE;    /* slightly darker & more saturated than surface */
-  --border: #DDC5C3;   /* highest saturation in hierarchy */
+  /* Text */
+  --text-primary:    oklch(5.0% 0.012 30);
+  --text-secondary:  oklch(45.0% 0.014 30);
 
+  /* Primary – warm reddish pink */
+  --primary:         oklch(50.0% 0.175 10);
+  --primary-hover:   oklch(46.0% 0.175 10);
+  --primary-active:  oklch(41.0% 0.175 10);
+  --primary-tint:    oklch(95.5% 0.030 10);
+  --primary-text:    oklch(99%   0     0);
 
-  --text-primary: #2B2B2B;
-  --text-secondary: #6E6A66;
+  /* Download – forest green */
+  --download:        oklch(43.0% 0.100 155);
+  --download-hover:  oklch(35.0% 0.100 155);
+  --download-active: oklch(22.0% 0.085 155);
+  --download-tint:   oklch(96.0% 0.025 155);
+  --download-text:   oklch(99%   0     0);
 
-  /* Brand – Primary (Pink) */
-  --primary: #EC517A;         /* warmer, redder pink */
-  --primary-hover: #D24366;   /* darker red-pink for hover */
-  --primary-active: #B83754;  /* active state */
-  --primary-tint: #F5A8B8;      /* visibly pink, softer against white */
+  /* Success */
+  --success:         oklch(70.0% 0.160 155);
+  --success-hover:   oklch(65.0% 0.155 155);
+  --success-active:  oklch(58.0% 0.150 155);
+  --success-tint:    oklch(95.5% 0.035 155);
 
-  --primary-text: #FFFFFF;     /* text on primary buttons */
+  /* Error */
+  --error:           oklch(59.0% 0.175 25);
+  --error-hover:     oklch(54.0% 0.170 25);
+  --error-active:    oklch(48.0% 0.165 25);
+  --error-tint:      oklch(95.5% 0.035 25);
 
-  /* Download Accent (Green) */
-  /* Download – High Contrast */
-  --download: #0F3D2E;
-  --download-hover: #145846;
-  --download-active: #1A6B55;
-  --download-tint: #D9EFE7;
+  /* Warning */
+  --warning:         oklch(76.0% 0.165 80);
+  --warning-hover:   oklch(70.0% 0.160 80);
+  --warning-active:  oklch(63.0% 0.155 80);
+  --warning-tint:    oklch(96.5% 0.040 80);
 
-  --download-text: #FFFFFF;
+  /* Info */
+  --info:            oklch(60.0% 0.200 255);
+  --info-hover:      oklch(54.0% 0.195 255);
+  --info-active:     oklch(47.0% 0.190 255);
+  --info-tint:       oklch(95.0% 0.040 255);
 
-    /* Success (Green) */
-    --success: #34C77B;
-    --success-hover: #2FB26F;
-    --success-active: #269B60;
-    --success-tint: #E3F6EC;
-
-    /* Error (Red) */
-    --error: #E5533D;
-    --error-hover: #CC4A36;
-    --error-active: #B14230;
-    --error-tint: #FCE5E1;
-
-    /* Warning (Yellow) */
-    --warning: #F2B705;
-    --warning-hover: #D9A404;
-    --warning-active: #BF9003;
-    --warning-tint: #FEF4D6;
-
-    /* Info (Blue) */
-    --info: #3B82F6;
-    --info-hover: #2F6FE0;
-    --info-active: #255CC4;
-    --info-tint: #E3ECFE;
-  /* State overlays */
-  --overlay-hover: rgba(0,0,0,0.04);
-  --overlay-active: rgba(0,0,0,0.08);
-
-  /* Focus */
-  --focus-ring: rgba(107,92,255,0.4);
+  /* Overlays & focus */
+  --overlay-hover:   oklch(0% 0 0 / 0.04);
+  --overlay-active:  oklch(0% 0 0 / 0.08);
+  --focus-ring:      oklch(60% 0.200 295 / 0.40);
 }
 
-
-/* =========================
-   DARK THEME
-   ========================= */
-
+/* ─── Dark ───────────────────────────────────────────────── */
 [data-theme="dark"] {
-  /* Base Neutrals */
-  --bg: #1F1A19;        /* very dark, slightly warm charcoal */
-  --surface: #2C2325;
-  --muted: #3B2D30;
-  --border: #4A393C;
 
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8B0B5;
+  /* Neutrals – deep warm purple base */
+  --bg:              oklch(15.5% 0.025 300);
+  --surface:         oklch(20.0% 0.028 300);
+  --muted:           oklch(25.0% 0.030 300);
+  --border:          oklch(40.0% 0.045 300);
 
-  --primary: #F55678;
-  --primary-hover: #F76B88;
-  --primary-active: #F8899D;
-  --primary-tint: #602930;
+  /* Text */
+  --text-primary:    oklch(92.0% 0.012 300);
+  --text-secondary:  oklch(62.0% 0.022 300);
 
-  --primary-text: #2B1B22;  /* Download – High Contrast */
-  --download: #7FF0C2;
-  --download-hover: #9AF5D0;
-  --download-active: #B3F8DD;
-  --download-tint: #1C3A2F;
+  /* Primary – lifted slightly for dark bg */
+  --primary:         oklch(62.0% 0.175 10);
+  --primary-hover:   oklch(67.0% 0.170 10);
+  --primary-active:  oklch(56.0% 0.175 10);
+  --primary-tint:    oklch(24.0% 0.060 10);
+  --primary-text:    oklch(99%   0     0);
 
-  --download-text: #0F1F18;
+  /* Download */
+  --download:        oklch(61.0% 0.110 155);
+  --download-hover: oklch(55.0% 0.110 155);
+  --download-active: oklch(48.0% 0.105 155);
+  --download-tint:   oklch(22.0% 0.045 155);
+  --download-text:   oklch(99%   0     0);
 
-  /* Semantic */
-  --success: #4DE29B;
-  --success-hover: #6EE8AD;
-  --success-active: #8BEFC0;
-  --success-tint: #1E3A2C;
+  /* Success */
+  --success:         oklch(72.0% 0.155 155);
+  --success-hover:   oklch(77.0% 0.150 155);
+  --success-active:  oklch(66.0% 0.150 155);
+  --success-tint:    oklch(22.0% 0.050 155);
 
-  /* Error (Red) */
-  --error: #FF6B55;
-  --error-hover: #FF8A78;
-  --error-active: #FFAA9C;
-  --error-tint: #3A1F1C;
+  /* Error */
+  --error:           oklch(66.0% 0.170 25);
+  --error-hover:     oklch(71.0% 0.165 25);
+  --error-active:    oklch(60.0% 0.165 25);
+  --error-tint:      oklch(22.0% 0.060 25);
 
-  /* Warning (Yellow) */
-  --warning: #FFD44D;
-  --warning-hover: #FFE07A;
-  --warning-active: #FFEBA6;
-  --warning-tint: #3A331A;
+  /* Warning */
+  --warning:         oklch(80.0% 0.155 80);
+  --warning-hover:   oklch(84.0% 0.148 80);
+  --warning-active:  oklch(74.0% 0.152 80);
+  --warning-tint:    oklch(22.0% 0.055 80);
 
-  /* Info (Blue) */
-  --info: #7AA2FF;
-  --info-hover: #9BB8FF;
-  --info-active: #B9CCFF;
-  --info-tint: #1F2A44;
+  /* Info */
+  --info:            oklch(68.0% 0.190 255);
+  --info-hover:      oklch(73.0% 0.185 255);
+  --info-active:     oklch(62.0% 0.188 255);
+  --info-tint:       oklch(20.0% 0.060 255);
 
-
-
-  /* State overlays */
-  --overlay-hover: rgba(255,255,255,0.05);
-  --overlay-active: rgba(255,255,255,0.10);
-
-  /* Focus */
-  --focus-ring: rgba(242,167,198,0.4);
+  /* Overlays & focus */
+  --overlay-hover:   oklch(100% 0 0 / 0.05);
+  --overlay-active:  oklch(100% 0 0 / 0.10);
+  --focus-ring:      oklch(70% 0.190 295 / 0.45);
 }
+
 
