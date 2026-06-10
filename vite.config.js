@@ -5,6 +5,7 @@ import injectHTML from "vite-plugin-html-inject";
 export default defineConfig({
   plugins: [[Inspect()], [injectHTML()]],
   base: "",
+  assetsInclude: ["**/*.md"],
   build: {
     rollupOptions: {
       input: {
