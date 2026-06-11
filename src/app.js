@@ -1,12 +1,13 @@
 import DOMPurify from 'dompurify';
-import {examplePage, icon3,icon2} from "./content.js";
-const clean = DOMPurify.sanitize(examplePage);
+import {examplePage, icon2, icon3, oldPage} from "./content.js";
 
-console.log(clean);
+console.log(oldPage);
+console.log(examplePage);
 
 const renderer = document.querySelector('#app');
-renderer.innerHTML = clean;
-const sidebar = document.querySelector('#sidebar');
+renderer.innerHTML = DOMPurify.sanitize(oldPage);
+const header = document.querySelector('header');
+const title = document.querySelector('title');
 const HTMLTag= document.documentElement;
 
 
@@ -31,4 +32,12 @@ darkModeButton.addEventListener('click',  () => {
   }
 })
 
+function heading() {
+  const heading = document.querySelector('h1');
+  const headingInsideHeader = header.querySelector('h5');
 
+  headingInsideHeader.innerHTML = heading.innerText;
+  title.innerHTML = heading.innerText;
+
+}
+heading();

@@ -12,7 +12,7 @@
 font-optical-sizing: auto;
 }
 :root {
-  --ratio: 1.225;
+  --ratio: 1.255;
   --base-font-size: 1rem;
   --h6: calc(var(--base-font-size) * var(--ratio));
   --h5: calc(var(--h6) * var(--ratio));
@@ -42,6 +42,7 @@ font-optical-sizing: auto;
   --primary-hover:   oklch(46.0% 0.175 10);
   --primary-active:  oklch(41.0% 0.175 10);
   --primary-tint:    oklch(95.5% 0.030 10);
+  --primary-tint-hover:    oklch(90% 0.030 10);
   --primary-text:    oklch(99%   0     0);
 
   /* Download – forest green */
@@ -99,6 +100,7 @@ font-optical-sizing: auto;
   --primary-hover:   oklch(67.0% 0.170 10);
   --primary-active:  oklch(56.0% 0.175 10);
   --primary-tint:    oklch(24.0% 0.060 10);
+  --primary-tint-hover:    oklch(36.5% 0.060 10);
   --primary-text:    oklch(99%   0     0);
 
   /* Download */
