@@ -31,8 +31,7 @@ button{
   padding:6px 6px;
   font-size:var(--h4);
   background: linear-gradient(var(--primary-tint));
-  border: 1.5px solid oklch(from var(--primary-tint) calc(l + 10) c h);
-  border-radius:0.25rem;
+  border-radius:6px;
 }
 button.hasIcon{
   line-height: 0;
@@ -117,9 +116,9 @@ h1 {
 }
 h2 {
   font-size: var(--h2);
-  font-weight: 450;
+  font-weight: 400;
   line-height:1;
-  padding-bottom: 0.05rem;
+  padding-bottom: 1.5rem;
   padding-top: 0.75rem;
 }
 h3 {
@@ -208,10 +207,13 @@ footer{
   height: 24rem;
 }
 
-img, figure img{
+img{
   max-width: 550px;
   max-height: 720px;
   border-radius: 0.5rem;
+}
+li p img{
+  width: 100%;
 }
 figcaption{
   font-size: var(--h5);
